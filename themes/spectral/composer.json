@@ -19,7 +19,7 @@
         "expose": [
             "assets/css",
             "assets/sass",
-            "assets/js",
+            "javascript",
             "assets/webfonts",
             "images"
         ]
