@@ -14,7 +14,7 @@ namespace {
         private static $db = [
             "Subtitle" => "Text",
                     
-            "IcontTitle" => "Text",
+            "IconTitle" => "Text",
             "IconContent" => "Text",
             "IconOne" => "Enum('fa-gem,fa-heart,solid fa-code','fa-heart')",
             "IconTwo" => "Enum('fa-gem,fa-heart,solid fa-code','fa-heart')",
@@ -69,19 +69,20 @@ namespace {
             $subtitle->setRightTitle("This text is shown on the banner image");
 
             //Icon Section
-
+            $fields->addFieldToTab("Root.Icon", $IconTitle = TextareaField::create("IconTitle"));
+            $fields->addFieldToTab("Root.Icon", $IconContent = TextareaField::create("IconContent"));
             $fields->addFieldToTab("Root.Icon", DropdownField::create("IconOne", "Icon One", singleton("Page")->dbObject("IconOne")->enumValues()));
             $fields->addFieldToTab("Root.Icon", DropdownField::create("IconTwo", "Icon Two", singleton("Page")->dbObject("IconTwo")->enumValues()));
             $fields->addFieldToTab("Root.Icon", DropdownField::create("IconThree", "Icon Three", singleton("Page")->dbObject("IconThree")->enumValues()));
 
             //Section to manage the content in the thrid part of pages with image
-            $fields->addFieldToTab("Root.Image", $ImageTitleOne = TextField::create("ImageTitleOne"));
+            $fields->addFieldToTab("Root.Image", $ImageTitleOne = TextareaField::create("ImageTitleOne"));
             $fields->addFieldToTab("Root.Image", $ImageParagrahOne = TextareaField::create("ImageParagrahOne"));
             $fields->addFieldToTab("Root.Image", UploadField::create("ContentImageOne"));
-            $fields->addFieldToTab("Root.Image", $ImageTitleTwo = TextField::create("ImageTitleTwo"));
+            $fields->addFieldToTab("Root.Image", $ImageTitleTwo = TextareaField::create("ImageTitleTwo"));
             $fields->addFieldToTab("Root.Image", $ImageParagrahTwo = TextareaField::create("ImageParagrahTwo"));
             $fields->addFieldToTab("Root.Image", UploadField::create("ContentImageTwo"));
-            $fields->addFieldToTab("Root.Image", $ImageTitleThree = TextField::create("ImageTitleThree"));
+            $fields->addFieldToTab("Root.Image", $ImageTitleThree = TextareaField::create("ImageTitleThree"));
             $fields->addFieldToTab("Root.Image", $ImageParagrahThree = TextareaField::create("ImageParagrahThree"));
             $fields->addFieldToTab("Root.Image", UploadField::create("ContentImageThree"));
 

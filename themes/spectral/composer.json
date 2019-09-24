@@ -17,10 +17,9 @@
 	"extra": {
 
         "expose": [
-            "assets/css",
-            "assets/sass",
+            "css",
             "javascript",
-            "assets/webfonts",
+            "webfonts",
             "images"
         ]
 	}

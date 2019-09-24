@@ -10,8 +10,8 @@
 		<title>Untitled</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<% require themedCSS('assets/css/main.css') %>
-		<% require themedCSS('assets/css/noscript.css') %>
+		<% require themedCSS('main.css') %>
+		<% require themedCSS('noscript.css') %>
 	
 	</head>
 	<body class="landing is-preload">
