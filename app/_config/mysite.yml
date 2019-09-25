@@ -3,3 +3,10 @@ Name: myproject
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: app
+  
+SilverStripe\View\SSViewer:
+  rewrite_hash_links: false
+
+  SilverStripe\Security\Member:
+    extensions:
+        - UserExtension
